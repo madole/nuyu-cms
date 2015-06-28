@@ -1,0 +1,48 @@
+@import "_variables";
+
+.home-column__left,
+.home-column__middle,
+.home-column__right {
+	@extend .three-column-layout;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+.home-column__middle {
+	border-left: 1px solid $border-color;
+	border-right: 1px solid $border-color;
+}
+
+.home__sub-heading {
+	font-family: "Helvetica";
+	text-align: center;
+}
+
+.find-us__surgery{
+	text-align: center;
+}
+.next-surgery__heading,
+.botox,
+.find-us__heading {
+	@extend .home__sub-heading;
+}
+
+.read-more {
+	@extend .pull-right;
+	a {
+		font-family: "Helvetica";
+		font-size: 1.2em;
+		color: $sassy-pink;
+	}
+}
+
+.find-us__map {
+	text-align: center;
+}
+
+.next-surgery__table {
+	@extend .table;
+	@extend .table-striped;
+	@extend .table-hover;
+
+}

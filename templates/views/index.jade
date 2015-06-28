@@ -1,27 +1,47 @@
 extends ../layouts/default
 
 block content
-	.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is your new <a href='http://keystonejs.com', target='_blank'>KeystoneJS</a> website.
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+	.container
+		.two-column-layout
+			img(src='/images/botox.jpg', width='500')
+		.two-column-layout
+			h1 NuYu Aesthetics
+			div= home.blurb1
+			
+	.container		
 		hr
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>madoliole@gmail.com</strong> and the password <strong>ch33se</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
-		hr
-		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
-		
-		
-		p
-			!= home.blurb1
+		.home-column__left
+			h2.botox Botox
+			div= home.blurb1
+			div.read-more
+				a(href="/products") Read more...
+		.home-column__middle
+			h2.next-surgery__heading Next Surgery
+			table.next-surgery__table
+				tr
+					td Monday 5th Jan 2015
+					td Kate's surgery
+				tr
+					td Monday 12th Jan 2015
+					td Anne's surgery
+				tr
+					td Monday 26th Jan 2015
+					td Kate's surgery
+				tr
+					td Monday 5th Jan 2015
+					td Kate's surgery
+				tr
+					td Monday 12th Jan 2015
+					td Anne's surgery
+				tr
+					td Monday 26th Jan 2015
+					td Kate's surgery
+		.home-column__right
+			h2.find-us__heading Find Us
+			.find-us__surgery Kate's Surgery - Annalong
+			.find-us__map
+				iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2338.9071123881477!2d-5.9009696!3d54.1108499!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48612f8b3821fef1%3A0xa32959e3dcb3cef1!2s11+Mullartown+Heights%2C+Annalong%2C+Newry%2C+Newry+and+Mourne+BT34+4UA%2C+UK!5e0!3m2!1sen!2sau!4v1428728315027", width="300", height="100", frameborder="0", style="border:1px solid #ccc")
+			.find-us__surgery Anne's Surgery - Newtownards
+			.find-us__map
+				iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18492.148473627552!2d-5.6911192!3d54.59485685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48610ab5be292745%3A0x67f0639faa143e42!2sNewtownards%2C+Ards+BT23%2C+UK!5e0!3m2!1sen!2sau!4v1428728715545", width="300", height="100", frameborder="0", style="border:1px solid #ccc")
+

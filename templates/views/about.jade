@@ -1,12 +1,12 @@
 extends ../layouts/default
+include ../mixins/circlePicture
 
 
 block content
 	.container
 		h1.about__header About our nurses
-		.column__left
-			h2.about__names Kate McDowell
-			span stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff 
-		.column__right
-			h2.about__names Kate McDowell
-			span stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff 
+		each nurse in nurses
+			.two-column-layout
+				+circleHead(nurse.image, nurse.name)
+				h2.about__names= nurse.name
+				.description= nurse.description

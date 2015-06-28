@@ -1,0 +1,18 @@
+.head__holder {
+	margin-bottom: 2em;
+	.head__circle {
+		width: 200px;
+		margin: 0 auto;
+		img {
+			transition-duration: 1s;
+			width: 200px;
+			border-radius: 50%;
+			border: 10px solid white;
+		}
+	}
+}
+
+.about__header,
+.about__names {
+	text-align: center;
+}

@@ -1,0 +1,19 @@
+
+.gallery-image {
+	@extend .col-xs-6;
+	@extend .col-sm-4;
+	@extend .col-md-3;
+	img {
+		padding: 10px;
+	}
+}
+.gallery-image--hero {
+	@extend .col-sm-4;
+	@extend .col-md-4;
+}
+
+.gallery-image--with-hero {
+	@extend .col-xs-4;
+	@extend .col-sm-4;
+	@extend .col-md-3;
+}

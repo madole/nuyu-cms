@@ -1,9 +1,7 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
-var Home = new keystone.List('Home', {
-	autokey: {from: 'name', path: 'key', unique: true}
-});
+var Home = new keystone.List('Home', { label: 'Home Page'});
 
 Home.add({
 	blurb1: {type: Types.Textarea, index: true},

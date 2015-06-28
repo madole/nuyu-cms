@@ -89,6 +89,7 @@ keystone.set('email tests', require('./routes/emails'));
 
 keystone.set('nav', {
 	'home': 'Home',
+	'about': 'About',
 	'posts': ['posts', 'post-categories'],
 	'galleries': 'galleries',
 	'enquiries': 'enquiries',
