@@ -3,3 +3,9 @@ extends ../layouts/default
 block content
 	.container 
 		h1 Products
+		if products.length
+			each product in products
+				.product__name= product.name
+				img(class='product__image' src=product.image)
+				.product__description= product.description
+					
