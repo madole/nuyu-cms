@@ -5001,5 +5001,7 @@ body {
 .contact__left-column, .contact__right-column {
   padding: 40px; }
 
-.contact__details i {
-  padding-right: 5px; }
+.contact__details {
+  font-size: 20px; }
+  .contact__details i {
+    padding-right: 5px; }

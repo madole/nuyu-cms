@@ -5,13 +5,14 @@ block content
 		.contact__left-column
 			.contact__header
 				h1 Contact Us
-			.contact__details
-				.contact__telephone
-					i.fa.fa-phone
-					span= contact.telephone
-				.contact__email
-					i.fa.fa-envelope
-					a(href='mailto:#{contact.email}')= contact.email
+			if contact	
+				.contact__details
+					.contact__telephone
+						i.fa.fa-phone
+						span= contact.telephone
+					.contact__email
+						i.fa.fa-envelope
+						a(href='mailto:#{contact.email}')= contact.email
 				
 			.contact__header
 				h2 Message
