@@ -10,3 +10,11 @@ $box-shadow-color: #ccc;
 	font-family: sassy;
 	font-size: 2em;
 }
+
+
+.navbar-brand {
+	padding: 9px 15px;
+	img {
+		max-width: 60px;
+	}
+}

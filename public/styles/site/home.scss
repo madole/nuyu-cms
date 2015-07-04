@@ -56,3 +56,10 @@
 	@extend .img-responsive;
 	max-width: 500px;
 }
+
+.home__main-text {
+	font-size: 17px;
+}
+.home__main-logo {
+	@extend .img-responsive;
+}

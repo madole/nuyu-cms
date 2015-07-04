@@ -1032,7 +1032,7 @@ figure {
 img {
   vertical-align: middle; }
 
-.img-responsive, .home__image, .product__image {
+.img-responsive, .home__image, .home__main-logo, .product__image {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -4908,6 +4908,11 @@ button.close {
   font-family: sassy;
   font-size: 2em; }
 
+.navbar-brand {
+  padding: 9px 15px; }
+  .navbar-brand img {
+    max-width: 60px; }
+
 body {
   font-family: 'Helvetica'; }
 
@@ -4929,6 +4934,11 @@ body {
   color: #FF0080;
   font-family: sassy;
   font-size: 2em; }
+
+.navbar-brand {
+  padding: 9px 15px; }
+  .navbar-brand img {
+    max-width: 60px; }
 
 .home__column-left, .home__column-middle, .home__column-right {
   padding-left: 3%;
@@ -4960,6 +4970,9 @@ body {
 
 .home__image {
   max-width: 500px; }
+
+.home__main-text {
+  font-size: 17px; }
 
 .head__holder {
   margin: 1em; }
