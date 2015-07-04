@@ -5,8 +5,17 @@ var About = new keystone.List('About', { label: 'Nurse'});
 
 About.add({
 	name: {type: Types.Text, index: true},
-	image: {type: Types.Text},
-	description: {type: Types.Textarea}
+	image: {type: Types.Text}
 });
 
 About.register();
+
+var AboutText = new keystone.List('AboutText', {label: 'About Text'});
+
+AboutText.add({
+	name: {type: Types.Text, default: 'About Text'},
+	aboutNuYu: {type: Types.Html, wysiwyg: true},
+	aboutNurses: {type: Types.Html, wysiwyg: true}
+});
+
+AboutText.register();

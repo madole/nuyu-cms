@@ -54,7 +54,8 @@
 
 .home__image {
 	@extend .img-responsive;
-	max-width: 500px;
+	width: 500px;
+	margin: 0 auto;
 }
 
 .home__main-text {

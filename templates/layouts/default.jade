@@ -9,8 +9,8 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 
-		title= title || 'NuYu'
-		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+		title= title || 'NuYu - Botox, facial fillers and hyperhydrosis specialists'
+		link(rel="shortcut icon", href="/images/icon.png", type="image/x-icon")
 		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", rel="stylesheet")
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
 		link(href="/styles/site.css", rel="stylesheet")
@@ -52,16 +52,16 @@ html
 						a.navbar-brand(href='/') 
 							img(src='images/logo.png')
 					.collapse.navbar-collapse
-						ul.nav.navbar-nav.navbar-left
+						ul.nav.navbar-nav.navbar-right
 							each link in navLinks
 								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-						ul.nav.navbar-nav.navbar-right
-							if user
-								if user.canAccessKeystone
-									li: a(href='/keystone') Open Keystone
-								li: a(href='/keystone/signout') Sign Out
-							else
-								li: a(href='/keystone/signin') Sign In
+						//ul.nav.navbar-nav.navbar-right
+						//	if user
+						//		if user.canAccessKeystone
+						//			li: a(href='/keystone') Open Keystone
+						//		li: a(href='/keystone/signout') Sign Out
+						//	else
+						//		li: a(href='/keystone/signin') Sign In
 
 		//- BODY
 		#body

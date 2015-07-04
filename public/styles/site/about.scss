@@ -19,11 +19,13 @@
 }
 
 .about__left-column {
-	@extend .two-column-layout;
+	@extend .col-md-8;
+	@extend .col-xs-12;
 }
 
 .about__right-column {
-	@extend .two-column-layout;
+	@extend .col-md-4;
+	@extend .col-xs-12;
 	.about__head-name {
 		text-align: center;
 		font-weight: bold;

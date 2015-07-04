@@ -13,14 +13,15 @@ include ../mixins/circlePicture
 
 block content
 	.container
-		h1.about__header Meet the team
-		
 		.about__left-column
-			each nurse in nurses
-				h2.about__names= nurse.name
-				.description= nurse.description
+			h1.about__header About NuYu Aesthetics
+			.description!= about.aboutNuYu
+				
+			h3.text-center Our Nurses
+			.description!= about.aboutNurses
 				
 		.about__right-column
+			h1.about__header Meet the team
 			each nurse in nurses
 				+circleHead(nurse.image, nurse.name)
 				.about__head-name= nurse.name
