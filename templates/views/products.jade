@@ -5,7 +5,8 @@ block content
 		h1 Products
 		if products.length
 			each product in products
-				.product__name= product.name
-				img(class='product__image' src=product.image)
-				.product__description= product.description
+				.product
+					h2.product__name= product.name
+					img(class='product__image' src=product.image.secure_url)
+					.product__description= product.description
 					

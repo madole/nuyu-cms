@@ -5,7 +5,7 @@ var Product = new keystone.List('Product', {label: 'Product'});
 
 Product.add({
 	name: {type: Types.Text, required: true, index: true},
-	image: {type: Types.Text},
+	image: {type: Types.CloudinaryImage},
 	description: {type: Types.Textarea}
 });
 

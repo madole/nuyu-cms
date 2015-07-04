@@ -1,5 +1,6 @@
 var keystone = require('keystone');
 var Enquiry = keystone.list('Enquiry');
+var Contact = keystone.list('Contact');
 
 exports = module.exports = function(req, res) {
 	
@@ -32,6 +33,13 @@ exports = module.exports = function(req, res) {
 			next();
 		});
 		
+	});
+	
+	view.on('init', function(next) {
+		Contact.model.findOne().exec(function(err, data) {
+			locals.contact = data;
+			next();
+		});
 	});
 	
 	view.render('contact');

@@ -49,5 +49,10 @@
 .home__humanized-time {
 	font-style: italic;
 	color: #ccc;
-	padding-bottom: 5px
+	padding-bottom: 5px;
+}
+
+.home__image {
+	@extend .img-responsive;
+	max-width: 500px;
 }

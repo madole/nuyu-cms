@@ -1,0 +1,16 @@
+.contact__left-column,
+.contact__right-column,{
+	@extend .two-column-layout;
+	padding: 40px;
+}
+
+.contact__header {
+	@extend .text-center;
+}
+
+.contact__details {
+	font-size: 20px;
+	i {
+		padding-right: 5px;
+	}
+}
