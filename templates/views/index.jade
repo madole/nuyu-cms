@@ -8,35 +8,24 @@ block content
 			h1 NuYu Aesthetics
 			div= home.blurb1
 			
-	.container		
+	.container
 		hr
-		.home-column__left
-			h2.botox Botox
-			div= home.blurb1
-			div.read-more
-				a(href="/products") Read more...
-		.home-column__middle
+		.home__column-left
+			h2.home__latest-news Latest News
+			h4.home__news-title= news.title
+			.home__humanized-time= news.humanizedTime
+			.home__news-brief!= news.content.brief
+			.read-more
+				a(href="/blog") Read more...
+		.home__column-middle
 			h2.next-surgery__heading Next Surgery
 			table.next-surgery__table
-				tr
-					td Monday 5th Jan 2015
-					td Kate's surgery
-				tr
-					td Monday 12th Jan 2015
-					td Anne's surgery
-				tr
-					td Monday 26th Jan 2015
-					td Kate's surgery
-				tr
-					td Monday 5th Jan 2015
-					td Kate's surgery
-				tr
-					td Monday 12th Jan 2015
-					td Anne's surgery
-				tr
-					td Monday 26th Jan 2015
-					td Kate's surgery
-		.home-column__right
+				each surgery in surgeries
+					tr
+						td= surgery.humanDate
+						td= surgery.where
+				
+		.home__column-right
 			h2.find-us__heading Find Us
 			.find-us__surgery Kate's Surgery - Annalong
 			.find-us__map

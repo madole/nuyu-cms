@@ -1,5 +1,5 @@
 .head__holder {
-	margin-bottom: 2em;
+	margin: 1em;
 	.head__circle {
 		width: 200px;
 		margin: 0 auto;
@@ -8,6 +8,7 @@
 			width: 200px;
 			border-radius: 50%;
 			border: 10px solid white;
+			box-shadow: 0 0 15px #ccc
 		}
 	}
 }
@@ -15,4 +16,20 @@
 .about__header,
 .about__names {
 	text-align: center;
+}
+
+.about__left-column {
+	@extend .two-column-layout;
+}
+
+.about__right-column {
+	@extend .two-column-layout;
+	.about__head-name {
+		text-align: center;
+		font-weight: bold;
+	}
+	.about__head-role {
+		text-align: center;
+		font-style: italic;
+	}
 }

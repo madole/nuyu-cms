@@ -1411,13 +1411,13 @@ pre {
   .row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .gallery-image, .gallery-image--with-hero, .col-lg-3, .col-xs-4, .gallery-image--with-hero, .col-sm-4, .gallery-image, .gallery-image--hero, .gallery-image--with-hero, .col-md-4, .three-column-layout, .home-column__left, .home-column__middle, .home-column__right, .gallery-image--hero, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .gallery-image, .col-sm-6, .col-md-6, .two-column-layout, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .three-column-layout, .home-column__left, .home-column__middle, .home-column__right, .two-column-layout, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .gallery-image, .gallery-image--with-hero, .col-lg-3, .col-xs-4, .gallery-image--with-hero, .col-sm-4, .gallery-image, .gallery-image--hero, .gallery-image--with-hero, .col-md-4, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .gallery-image--hero, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .gallery-image, .col-sm-6, .col-md-6, .two-column-layout, .about__left-column, .about__right-column, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .two-column-layout, .about__left-column, .about__right-column, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .gallery-image--with-hero, .col-xs-5, .col-xs-6, .gallery-image, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .three-column-layout, .home-column__left, .home-column__middle, .home-column__right, .two-column-layout {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .gallery-image--with-hero, .col-xs-5, .col-xs-6, .gallery-image, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .two-column-layout, .about__left-column, .about__right-column {
   float: left; }
 
 .col-xs-1 {
@@ -1453,7 +1453,7 @@ pre {
 .col-xs-11 {
   width: 91.66667%; }
 
-.col-xs-12, .three-column-layout, .home-column__left, .home-column__middle, .home-column__right, .two-column-layout {
+.col-xs-12, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .two-column-layout, .about__left-column, .about__right-column {
   width: 100%; }
 
 .col-xs-pull-0 {
@@ -1680,7 +1680,7 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .gallery-image, .gallery-image--with-hero, .col-md-4, .three-column-layout, .home-column__left, .home-column__middle, .home-column__right, .gallery-image--hero, .col-md-5, .col-md-6, .two-column-layout, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .gallery-image, .gallery-image--with-hero, .col-md-4, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .gallery-image--hero, .col-md-5, .col-md-6, .two-column-layout, .about__left-column, .about__right-column, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-1 {
     width: 8.33333%; }
@@ -1688,11 +1688,11 @@ pre {
     width: 16.66667%; }
   .col-md-3, .gallery-image, .gallery-image--with-hero {
     width: 25%; }
-  .col-md-4, .three-column-layout, .home-column__left, .home-column__middle, .home-column__right, .gallery-image--hero {
+  .col-md-4, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .gallery-image--hero {
     width: 33.33333%; }
   .col-md-5 {
     width: 41.66667%; }
-  .col-md-6, .two-column-layout {
+  .col-md-6, .two-column-layout, .about__left-column, .about__right-column {
     width: 50%; }
   .col-md-7 {
     width: 58.33333%; }
@@ -4930,15 +4930,15 @@ body {
   font-family: sassy;
   font-size: 2em; }
 
-.home-column__left, .home-column__middle, .home-column__right {
+.home__column-left, .home__column-middle, .home__column-right {
   padding-left: 3%;
   padding-right: 3%; }
 
-.home-column__middle {
+.home__column-middle {
   border-left: 1px solid #eee;
   border-right: 1px solid #eee; }
 
-.home__sub-heading, .next-surgery__heading, .botox, .find-us__heading {
+.home__sub-heading, .next-surgery__heading, .home__latest-news, .find-us__heading {
   font-family: "Helvetica";
   text-align: center; }
 
@@ -4953,8 +4953,13 @@ body {
 .find-us__map {
   text-align: center; }
 
+.home__humanized-time {
+  font-style: italic;
+  color: #ccc;
+  padding-bottom: 5px; }
+
 .head__holder {
-  margin-bottom: 2em; }
+  margin: 1em; }
   .head__holder .head__circle {
     width: 200px;
     margin: 0 auto; }
@@ -4962,10 +4967,18 @@ body {
       transition-duration: 1s;
       width: 200px;
       border-radius: 50%;
-      border: 10px solid white; }
+      border: 10px solid white;
+      box-shadow: 0 0 15px #ccc; }
 
 .about__header, .about__names {
   text-align: center; }
+
+.about__right-column .about__head-name {
+  text-align: center;
+  font-weight: bold; }
+.about__right-column .about__head-role {
+  text-align: center;
+  font-style: italic; }
 
 .gallery-image img {
   padding: 10px; }

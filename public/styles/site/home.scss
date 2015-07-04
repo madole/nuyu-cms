@@ -1,14 +1,14 @@
 @import "_variables";
 
-.home-column__left,
-.home-column__middle,
-.home-column__right {
+.home__column-left,
+.home__column-middle,
+.home__column-right {
 	@extend .three-column-layout;
 	padding-left: 3%;
 	padding-right: 3%;
 }
 
-.home-column__middle {
+.home__column-middle {
 	border-left: 1px solid $border-color;
 	border-right: 1px solid $border-color;
 }
@@ -22,7 +22,7 @@
 	text-align: center;
 }
 .next-surgery__heading,
-.botox,
+.home__latest-news,
 .find-us__heading {
 	@extend .home__sub-heading;
 }
@@ -44,5 +44,10 @@
 	@extend .table;
 	@extend .table-striped;
 	@extend .table-hover;
+}
 
+.home__humanized-time {
+	font-style: italic;
+	color: #ccc;
+	padding-bottom: 5px
 }
