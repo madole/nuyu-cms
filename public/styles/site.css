@@ -5019,3 +5019,19 @@ body {
   font-size: 20px; }
   .contact__details i {
     padding-right: 5px; }
+
+.navbar-default {
+  background-color: white;
+  border-color: white; }
+  .navbar-default .navbar-nav .active a {
+    color: #777;
+    background-color: transparent;
+    border-bottom: 3px solid deeppink; }
+    .navbar-default .navbar-nav .active a:hover {
+      color: deeppink;
+      background-color: transparent; }
+  .navbar-default .navbar-nav li a {
+    transition-duration: 0.25s;
+    border-bottom: 3px solid white; }
+    .navbar-default .navbar-nav li a:hover {
+      border-bottom: 3px solid deeppink; }
