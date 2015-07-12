@@ -8,14 +8,11 @@ block content
 	.container
 		if galleries.length
 			each gallery in galleries
-				.row.gallery-images
-					if gallery.heroImage.exists
-						.gallery-image--hero: img(src=gallery._.heroImage.limit(680,680)).img-rounded
-						.col-sm-8.col-md-8: .row
-							each image in gallery.images
-								.gallery-image--with-hero: img(src=image.limit(300,300)).img-rounded
-					else
-						each image in gallery.images
-							.gallery-image: img(src=image.limit(300,300)).img-rounded
+				.gallery-image--before
+					img(src=gallery._.beforeImage.fill(300,250)).img-rounded
+					.gallery-image__text Before #{gallery.name}
+				.gallery-image--after
+					img(src=gallery._.afterImage.fill(300,250)).img-rounded
+					.gallery-image__text After #{gallery.name}
 		else
 			h3.text-muted There are no image galleries yet.

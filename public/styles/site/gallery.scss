@@ -3,17 +3,19 @@
 	@extend .col-xs-6;
 	@extend .col-sm-4;
 	@extend .col-md-3;
+	float: left;
+	height: 300px;
 	img {
-		padding: 10px;
+		margin: 0 auto
 	}
 }
-.gallery-image--hero {
-	@extend .col-sm-4;
-	@extend .col-md-4;
+
+.gallery-image--before,
+.gallery-image--after {
+	@extend .gallery-image;
 }
 
-.gallery-image--with-hero {
-	@extend .col-xs-4;
-	@extend .col-sm-4;
-	@extend .col-md-3;
+.gallery-image__text {
+	text-align: center;
+	font-size: 25px;
 }
