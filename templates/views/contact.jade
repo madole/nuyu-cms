@@ -4,17 +4,6 @@ block content
 	.container
 		.contact__left-column
 			.contact__header
-				h1 Contact Us
-			if contact	
-				.contact__details
-					.contact__telephone
-						i.fa.fa-phone
-						span= contact.telephone
-					.contact__email
-						i.fa.fa-envelope
-						a(href='mailto:#{contact.email}')= contact.email
-				
-			.contact__header
 				h2 Message
 			if enquirySubmitted
 				h3 Thanks for getting in touch.
@@ -45,4 +34,20 @@ block content
 		
 		.contact__right-column
 			.contact__header
-				h1 Find us
+				.contact__header
+				h1 Contact Us
+			each contact in contacts
+				.contact__details
+					.contact__name= contact.name
+					.contact__telephone
+						i.fa.fa-phone
+						span= contact.telephone
+					.contact__email
+						i.fa.fa-envelope
+						a(href='mailto:#{contact.email}')= contact.email
+					if contact.website
+						.contact__website
+							i.fa.fa-desktop
+							a(href=contact.website)= contact.website
+				hr
+				

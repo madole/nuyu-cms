@@ -5030,6 +5030,10 @@ body {
   text-align: center;
   font-size: 25px; }
 
+.blueimp-gallery > .title.slide-gallery_title {
+  font-size: 30px;
+  color: white; }
+
 .product {
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px; }
@@ -5049,6 +5053,9 @@ body {
   font-size: 20px; }
   .contact__details i {
     padding-right: 5px; }
+
+.contact__name {
+  font-weight: bold; }
 
 .navbar.navbar-default {
   background-color: white;

@@ -35,13 +35,8 @@ exports = module.exports = function(req, res) {
 		
 	});
 	
-	view.on('init', function(next) {
-		Contact.model.findOne().exec(function(err, data) {
-			locals.contact = data;
-			next();
-		});
-	});
-	
+	view.query('contacts', Contact.model.find().sort({name: 1}));
+
 	view.render('contact');
 	
 };
