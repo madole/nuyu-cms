@@ -1,4 +1,4 @@
-.navbar-default {
+.navbar.navbar-default {
 	background-color: white;
 	border-color: white;
 	.navbar-nav {
@@ -13,7 +13,6 @@
 		}
 		li {
 			a {
-
 				transition-duration: 0.25s;
 				border-bottom: 3px solid white;
 				&:hover {
@@ -23,5 +22,11 @@
 		}
 	}
 
+}
+
+@media (max-width: $screen-xs-max) {
+	.navbar .navbar-brand {
+		padding: 8px;
+	}
 }
 
