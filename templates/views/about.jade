@@ -15,11 +15,20 @@ block content
 	.container
 		.about__left-column
 			h1.about__header About NuYu Aesthetics
-			.description!= about.aboutNuYu
+			.about__description!= about.aboutNuYu
 				
-			h3.text-center Our Nurses
-			.description!= about.aboutNurses
+			.about_mobile_nurses
+				h1.about__header Meet the team
+				each nurse in nurses
+					.about__nurse
+						+circleHead(nurse.image, nurse.name)
+						.about__head-name= nurse.name
+						.about__head-role Nurse Practitioner
+					
+			h2.text-center Our Nurses
+			.about__description!= about.aboutNurses
 				
+		
 		.about__right-column
 			h1.about__header Meet the team
 			each nurse in nurses

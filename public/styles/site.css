@@ -4761,7 +4761,7 @@ button.close {
 .visible-lg {
   display: none !important; }
 
-.visible-xs-block, .visible-xs-inline, .visible-xs-inline-block, .visible-sm-block, .visible-sm-inline, .visible-sm-inline-block, .visible-md-block, .visible-md-inline, .visible-md-inline-block, .visible-lg-block, .visible-lg-inline, .visible-lg-inline-block {
+.visible-xs-block, .about_mobile_nurses, .visible-xs-inline, .visible-xs-inline-block, .visible-sm-block, .about_mobile_nurses, .visible-sm-inline, .visible-sm-inline-block, .visible-md-block, .visible-md-inline, .visible-md-inline-block, .visible-lg-block, .visible-lg-inline, .visible-lg-inline-block {
   display: none !important; }
 
 @media (max-width: 767px) {
@@ -4775,7 +4775,7 @@ button.close {
     display: table-cell !important; } }
 
 @media (max-width: 767px) {
-  .visible-xs-block {
+  .visible-xs-block, .about_mobile_nurses {
     display: block !important; } }
 
 @media (max-width: 767px) {
@@ -4797,7 +4797,7 @@ button.close {
     display: table-cell !important; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .visible-sm-block {
+  .visible-sm-block, .about_mobile_nurses {
     display: block !important; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -4853,11 +4853,11 @@ button.close {
     display: inline-block !important; } }
 
 @media (max-width: 767px) {
-  .hidden-xs {
+  .hidden-xs, .about__right-column {
     display: none !important; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .hidden-sm {
+  .hidden-sm, .about__right-column {
     display: none !important; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -4973,7 +4973,8 @@ body {
   margin: 0 auto; }
 
 .home__main-text {
-  font-size: 17px; }
+  font-size: 17px;
+  padding-top: 10px; }
 
 .head__holder {
   margin: 1em; }
@@ -4990,12 +4991,23 @@ body {
 .about__header, .about__names {
   text-align: center; }
 
-.about__right-column .about__head-name {
+.about__head-name {
   text-align: center;
   font-weight: bold; }
-.about__right-column .about__head-role {
+
+.about__head-role {
   text-align: center;
   font-style: italic; }
+
+.about__description {
+  font-size: 16px; }
+
+.about_mobile_nurses .about__nurse {
+  float: left;
+  width: 50%; }
+@media (max-width: 767px) {
+  .about_mobile_nurses .about__nurse {
+    width: 100%; } }
 
 .gallery-image img {
   padding: 10px; }
