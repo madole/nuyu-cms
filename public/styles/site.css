@@ -5050,12 +5050,19 @@ body {
   padding: 40px; }
 
 .contact__details {
-  font-size: 20px; }
+  font-size: 17px; }
   .contact__details i {
     padding-right: 5px; }
+  .contact__details a {
+    color: #FF0080; }
+    .contact__details a:hover {
+      color: purple; }
 
 .contact__name {
   font-weight: bold; }
+
+.contact__map {
+  width: 250px; }
 
 .navbar.navbar-default {
   background-color: white;

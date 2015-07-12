@@ -9,12 +9,24 @@
 }
 
 .contact__details {
-	font-size: 20px;
+	font-size: 17px;
 	i {
 		padding-right: 5px;
 	}
+
+	a {
+		color: $sassy-pink;
+		&:hover {
+			color: purple;
+		}
+	}
+
 }
 
 .contact__name {
 	font-weight: bold;
+}
+
+.contact__map {
+	width: 250px;
 }

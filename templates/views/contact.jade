@@ -49,5 +49,17 @@ block content
 						.contact__website
 							i.fa.fa-desktop
 							a(href=contact.website)= contact.website
+					if contact.address 
+						.contact__address
+							i.glyphicon.glyphicon-map-marker
+							span= contact.address
+						
+						if contact.name === 'Tip Top Beauty'
+							.contact__map
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2339.1381501711985!2d-5.897949999999695!3d54.109128992397295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x206950543b51ac99!2sCornmill+Quay!5e0!3m2!1sen!2sau!4v1436693194473" width="250" height="100" frameborder="0" style="border:0" allowfullscreen></iframe>
+						
+						if contact.name === 'Lisa Woods'
+							.contact__map
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2311.976719528601!2d-5.8093578!3d54.5867843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48610ba417b3f149%3A0x71905cb3303e19d2!2sHanwood+Business+Park%2C+Old+Dundonald+Rd%2C+Belfast%2C+Castlereagh+BT16+1DE%2C+UK!5e0!3m2!1sen!2sus!4v1436693467909" width="250" height="100" frameborder="0" style="border:0" allowfullscreen></iframe>
 				hr
 				
