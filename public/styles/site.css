@@ -4914,7 +4914,7 @@ button.close {
     max-width: 60px; }
 
 body {
-  font-family: 'Helvetica'; }
+  font-family: 'Arial'; }
 
 #header {
   margin-top: 30px; }
@@ -4976,6 +4976,9 @@ body {
   font-size: 17px;
   padding-top: 10px; }
 
+.home__main-logo {
+  margin: 0 auto; }
+
 .head__holder {
   margin: 1em; }
   .head__holder .head__circle {
@@ -5000,7 +5003,7 @@ body {
   font-style: italic; }
 
 .about__description {
-  font-size: 16px; }
+  font-size: 20px; }
 
 .about_mobile_nurses .about__nurse {
   float: left;
@@ -5008,6 +5011,10 @@ body {
 @media (max-width: 767px) {
   .about_mobile_nurses .about__nurse {
     width: 100%; } }
+
+.sticky {
+  position: fixed;
+  top: 0; }
 
 .gallery-image, .gallery-image--before, .gallery-image--after {
   float: left;

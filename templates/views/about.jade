@@ -32,8 +32,12 @@ block content
 				
 		
 		.about__right-column
-			h1.about__header Meet the team
-			each nurse in nurses
-				+circleHead(nurse.image, nurse.name)
-				.about__head-name= nurse.name
-				.about__head-role Nurse Practitioner
+			.about__meet-the-team
+				h1.about__header Meet the team
+				each nurse in nurses
+					+circleHead(nurse.image, nurse.name)
+					.about__head-name= nurse.name
+					.about__head-role Nurse Practitioner
+
+block js
+	script(src='js/aboutDecorator.js')
