@@ -4,54 +4,54 @@ block head
 	link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css")
 	link(rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css")
 	link(rel="stylesheet" href="styles/bootstrap-image-gallery.min.css")
-
-block intro
-	.container
-		h1.text-center Gallery
+		
 	
 block content
-	.container
-		if galleries.length
-			each gallery in galleries
-				.gallery-image--before
-					a(href=gallery.beforeImage.secure_url title="Before #{gallery.name}" data-gallery)
-						img(src=gallery._.beforeImage.fill(300,300)).img-rounded
-						i.gallery__zoom.fa.fa-search-plus.fa-2x
-						.gallery-image__text Before #{gallery.name}
-				.gallery-image--after
-					a(href=gallery.afterImage.secure_url title="After #{gallery.name}" data-gallery)
-						img(src=gallery._.afterImage.fill(300,300)).img-rounded
-						i.gallery__zoom.fa.fa-search-plus.fa-2x
-						.gallery-image__text After #{gallery.name}
-		else
-			h3.text-muted There are no image galleries yet.
-		
-		
-	// The Bootstrap Image Gallery lightbox, should be a child element of the document body
-	#blueimp-gallery.blueimp-gallery(data-use-bootstrap-modal="false")
-		// The container for the modal slides
-		.slides
-		// Controls for the borderless lightbox
-		h3.title.slide-gallery_title
-		a.prev &lsaquo;
-		a.next &rsaquo;
-		a.close &times;
-		a.play-pause
-		ol.indicator
-		// The modal dialog, which will be used to wrap the lightbox content
-		.modal.fade
-			.modal-dialog
-				.modal-content
-					.modal-header
-						button.close(type='button', aria-hidden='true') &times;
-						h4.modal-title
-					.modal-body.next
-					.modal-footer
-						button.btn.btn-default.pull-left.prev(type='button') 
-							i.glyphicon.glyphicon-chevron-left Previous
-						button.btn.btn-primary.next(type='button') Next
-							i.glyphicon.glyphicon-chevron-right
+	.gallery
+		h1.gallery__header Gallery
+		.container
+			if galleries.length
+				each gallery in galleries
+					.gallery-image--before
+						a(href=gallery.beforeImage.secure_url title="Before #{gallery.name}" data-gallery)
+							img(src=gallery._.beforeImage.fill(300,300)).img-rounded
+							i.gallery__zoom.fa.fa-search-plus.fa-2x
+							.gallery-image__text Before #{gallery.name}
+					.gallery-image--after
+						a(href=gallery.afterImage.secure_url title="After #{gallery.name}" data-gallery)
+							img(src=gallery._.afterImage.fill(300,300)).img-rounded
+							i.gallery__zoom.fa.fa-search-plus.fa-2x
+							.gallery-image__text After #{gallery.name}
+			else
+				h3.text-muted There are no image galleries yet.
+			
+			
+		// The Bootstrap Image Gallery lightbox, should be a child element of the document body
+		#blueimp-gallery.blueimp-gallery(data-use-bootstrap-modal="false")
+			// The container for the modal slides
+			.slides
+			// Controls for the borderless lightbox
+			h3.title.slide-gallery_title
+			a.prev &lsaquo;
+			a.next &rsaquo;
+			a.close &times;
+			a.play-pause
+			ol.indicator
+			// The modal dialog, which will be used to wrap the lightbox content
+			.modal.fade
+				.modal-dialog
+					.modal-content
+						.modal-header
+							button.close(type='button', aria-hidden='true') &times;
+							h4.modal-title
+						.modal-body.next
+						.modal-footer
+							button.btn.btn-default.pull-left.prev(type='button') 
+								i.glyphicon.glyphicon-chevron-left Previous
+							button.btn.btn-primary.next(type='button') Next
+								i.glyphicon.glyphicon-chevron-right
 	
+block js
 	script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
 	script(src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
 	script(src='js/bootstrap-image-gallery.min.js')

@@ -1,3 +1,12 @@
+.gallery {
+	font-family: $font-family-sans-serif;
+}
+
+.gallery__header {
+	@extend .text-center;
+	font-family: $font-family-sans-serif;
+}
+
 .gallery-image {
 	@extend .col-xs-6;
 	@extend .col-sm-3;
@@ -11,7 +20,6 @@
 
 .gallery-image--before,
 .gallery-image--after {
-	
 	@extend .gallery-image;
 	a {
 		text-decoration: none;

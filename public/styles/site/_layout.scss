@@ -1,5 +1,6 @@
 body {
-	font-family: 'Arial';
+	font-size: 17px;
+	font-family: $font-family-sans-serif;
 }
 #header {
 	margin-top: 30px;
@@ -29,6 +30,7 @@ body {
 }
 
 #footer {
+	@extend .text-center;
 	a {
 		color: $sassy-pink;
 		text-decoration: none;

@@ -1004,7 +1004,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Mallanna", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -1148,7 +1148,7 @@ mark, .mark {
 .text-right {
   text-align: right; }
 
-.text-center, .home__product, .product__name, .products__nav-item, .contact__header {
+.text-center, #footer, .home__product, .gallery__header, .product__name, .products__nav-item, .contact__header {
   text-align: center; }
 
 .text-justify {
@@ -4338,7 +4338,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Mallanna", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -4433,7 +4433,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Mallanna", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857;
@@ -4914,7 +4914,8 @@ button.close {
     max-width: 60px; }
 
 body {
-  font-family: 'Arial'; }
+  font-size: 17px;
+  font-family: "Mallanna", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 #header {
   margin-top: 30px; }
@@ -4954,7 +4955,7 @@ body {
   border-right: 1px solid #eee; }
 
 .home__sub-heading, .next-surgery__heading, .home__latest-news, .home__products {
-  font-family: "Helvetica";
+  font-family: "Mallanna", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center; }
 
 .find-us__surgery {
@@ -4992,7 +4993,6 @@ body {
   margin: 0 auto; }
 
 .home__main-text {
-  font-size: 17px;
   padding-top: 10px; }
 
 .home__main-logo {
@@ -5038,6 +5038,12 @@ body {
 .sticky {
   position: fixed;
   top: 0; }
+
+.gallery {
+  font-family: "Mallanna", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.gallery__header {
+  font-family: "Mallanna", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .gallery-image, .gallery-image--before, .gallery-image--after {
   float: left;
@@ -5147,4 +5153,5 @@ body {
     padding: 8px; } }
 
 .nav {
-  font-size: 20px; }
+  font-size: 20px;
+  font-family: 'Mallanna', sans-serif; }

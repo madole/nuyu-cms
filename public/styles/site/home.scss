@@ -15,7 +15,7 @@
 }
 
 .home__sub-heading {
-	font-family: "Helvetica";
+	font-family: $font-family-sans-serif;
 	text-align: center;
 }
 
@@ -81,7 +81,6 @@
 }
 
 .home__main-text {
-	font-size: 17px;
 	padding-top: 10px;
 }
 .home__main-logo {
