@@ -1148,7 +1148,7 @@ mark, .mark {
 .text-right {
   text-align: right; }
 
-.text-center, .product__name, .products__nav-item, .contact__header {
+.text-center, .home__product, .product__name, .products__nav-item, .contact__header {
   text-align: center; }
 
 .text-justify {
@@ -4930,6 +4930,10 @@ body {
   max-width: 100%;
   height: auto; }
 
+#footer a {
+  color: #FF0080;
+  text-decoration: none; }
+
 .header-navbar .navbar-brand {
   color: #FF0080;
   font-family: sassy;
@@ -4942,21 +4946,36 @@ body {
 
 .home__column-left, .home__column-middle, .home__column-right {
   padding-left: 3%;
-  padding-right: 3%; }
+  padding-right: 3%;
+  margin-bottom: 20px; }
 
 .home__column-middle {
   border-left: 1px solid #eee;
   border-right: 1px solid #eee; }
 
-.home__sub-heading, .next-surgery__heading, .home__latest-news, .find-us__heading {
+.home__sub-heading, .next-surgery__heading, .home__latest-news, .home__products {
   font-family: "Helvetica";
   text-align: center; }
 
 .find-us__surgery {
   text-align: center; }
 
+.next-surgery__heading, .home__latest-news, .home__products {
+  margin-top: -5px; }
+
+.home__latest-news, .home__products {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eeeeee; }
+
+.home__product {
+  font-size: 25px;
+  padding: 10px 0; }
+  .home__product:not(:last-of-type) {
+    border-bottom: 1px solid #eee; }
+  .home__product a {
+    color: #FF0080; }
+
 .next-surgery__click a, .read-more a {
-  font-family: "Helvetica";
   font-size: 1.2em;
   color: #FF0080; }
 
@@ -4978,6 +4997,10 @@ body {
 
 .home__main-logo {
   margin: 0 auto; }
+
+.home__bottom-container {
+  border-top: 1px solid #eee;
+  padding-top: 30px; }
 
 .head__holder {
   margin: 1em; }
@@ -5107,17 +5130,17 @@ body {
   background-color: white;
   border-color: white; }
   .navbar.navbar-default .navbar-nav .active a {
-    color: #777;
     background-color: transparent;
-    border-bottom: 3px solid deeppink; }
+    border-bottom: 3px solid #FF0080; }
     .navbar.navbar-default .navbar-nav .active a:hover {
-      color: deeppink;
+      color: #FF0080;
       background-color: transparent; }
   .navbar.navbar-default .navbar-nav li a {
+    color: #000;
     transition-duration: 0.25s;
     border-bottom: 3px solid white; }
     .navbar.navbar-default .navbar-nav li a:hover {
-      border-bottom: 3px solid deeppink; }
+      border-bottom: 3px solid #FF0080; }
 
 @media (max-width: 767px) {
   .navbar .navbar-brand {

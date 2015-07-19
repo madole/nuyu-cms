@@ -8,15 +8,15 @@ block content
 			img.home__main-logo(src='/images/logo-long.png')
 			.home__main-text!= home.mainBlurb
 			
-	.container
-		hr
+	.container.home__bottom-container
 		.home__column-left
-			h2.home__latest-news Latest News
-			h4.home__news-title= news.title
-			.home__humanized-time= news.humanizedTime
-			.home__news-brief!= news.content.brief
-			.read-more
-				a(href="/blog") Read more...
+			h2.home__products Our Services
+			if products.length
+				each product in products
+					.home__product
+						a(href="/products##{product.name.split(' ').join('')}")=product.name
+			
+		
 		.home__column-middle
 			h2.next-surgery__heading Next Surgery
 			table.next-surgery__table
@@ -28,11 +28,9 @@ block content
 				a(href="/contact") Click here to book...
 				
 		.home__column-right
-			h2.find-us__heading Find Us
-			.find-us__surgery Kate's Surgery - Annalong
-			.find-us__map
-				iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2338.9071123881477!2d-5.9009696!3d54.1108499!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48612f8b3821fef1%3A0xa32959e3dcb3cef1!2s11+Mullartown+Heights%2C+Annalong%2C+Newry%2C+Newry+and+Mourne+BT34+4UA%2C+UK!5e0!3m2!1sen!2sau!4v1428728315027", width="300", height="100", frameborder="0", style="border:1px solid #ccc")
-			.find-us__surgery Anne's Surgery - Newtownards
-			.find-us__map
-				iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18492.148473627552!2d-5.6911192!3d54.59485685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48610ab5be292745%3A0x67f0639faa143e42!2sNewtownards%2C+Ards+BT23%2C+UK!5e0!3m2!1sen!2sau!4v1428728715545", width="300", height="100", frameborder="0", style="border:1px solid #ccc")
-
+			h2.home__latest-news Latest News
+			h4.home__news-title= news.title
+			.home__humanized-time= news.humanizedTime
+			.home__news-brief!= news.content.brief
+			.read-more
+				a(href="/blog") Read more...

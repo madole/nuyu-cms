@@ -3,25 +3,22 @@
 	border-color: white;
 	.navbar-nav {
 		.active a {
-			color: #777;
 			background-color: transparent;
-			border-bottom: 3px solid deeppink;
+			border-bottom: 3px solid $sassy-pink;
 			&:hover {
-				color: deeppink;
+				color: $sassy-pink;
 				background-color: transparent;
 			}
 		}
-		li {
-			a {
-				transition-duration: 0.25s;
-				border-bottom: 3px solid white;
-				&:hover {
-					border-bottom: 3px solid deeppink;
-				}
+		li a {
+			color: #000;
+			transition-duration: 0.25s;
+			border-bottom: 3px solid white;
+			&:hover {
+				border-bottom: 3px solid $sassy-pink;
 			}
 		}
 	}
-
 }
 
 @media (max-width: $screen-xs-max) {

@@ -28,3 +28,9 @@ body {
 	@extend .col-xs-12;
 }
 
+#footer {
+	a {
+		color: $sassy-pink;
+		text-decoration: none;
+	}
+}

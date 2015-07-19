@@ -4,6 +4,7 @@ var moment = require('moment');
 var Home = keystone.list('Home');
 var Post = keystone.list('Post');
 var Surgeries = keystone.list('Surgeries');
+var Products = keystone.list('Product');
 
 
 function getTimeFromNow(date) {
@@ -22,14 +23,14 @@ exports = module.exports = function (req, res) {
 	locals.section = 'home';
 
 	// Get the data from the Home model
-	view.on('init', function (next) {
+	view.on('init', function(next) {
 		Home.model.findOne().exec(function (err, homeData) {
 			locals.home = homeData;
 			return next();
 		})
 	});
 
-	view.on('init', function (next) {
+	view.on('init', function(next) {
 		Post.model.findOne()
 			.where('state', 'published')
 			.sort('-publishedDate')
@@ -40,11 +41,15 @@ exports = module.exports = function (req, res) {
 						});
 	});
 
-	view.on('init', function (next) {
+	view.on('init', function(next) {
 		Surgeries.model.find()
 			.sort('date')
 			.limit(5)
 			.exec(function (err, data) {
+							if(err) {
+								console.log(err);
+								return next(err);
+							}
 							locals.surgeries = data.map(function (surgery) {
 								var newSurgery = surgery;
 								console.log(JSON.stringify(surgery));
@@ -56,6 +61,20 @@ exports = module.exports = function (req, res) {
 						});
 	});
 
+	view.on('init', function(next) {
+		Products.model.find()
+			.sort('name')
+			.limit(5)
+			.exec(function(err, data) {
+								if(err) {
+									console.log(err);
+									return next(err);
+								}
+								locals.products = data;
+								return next();
+								});
+	});
+	
 	// Render the view
 	view.render('index');
 
