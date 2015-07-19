@@ -1,20 +1,12 @@
 extends ../layouts/default
 include ../mixins/circlePicture
 
-
-//block content
-//	.container
-//		h1.about__header About our nurses
-//		each nurse in nurses
-//			.two-column-layout
-//				+circleHead(nurse.image, nurse.name)
-//				h2.about__names= nurse.name
-//				.description= nurse.description
-
 block content
 	.container
 		.about__left-column
+			hr
 			h1.about__header About NuYu Aesthetics
+			hr
 			.about__description!= about.aboutNuYu
 				
 			.about_mobile_nurses
@@ -26,8 +18,8 @@ block content
 						.about__head-role Nurse Practitioner
 					
 			hr
-		
 			h2.text-center Our Nurses
+			hr
 			.about__description!= about.aboutNurses
 				
 		

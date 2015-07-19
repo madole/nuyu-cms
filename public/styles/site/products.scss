@@ -8,10 +8,32 @@
 
 .product__name {
 	@extend .text-center;
-	font-style: italic;
+	font-weight: bold;
 }
 .product__image {
 	@extend .center-block;
 	@extend .img-responsive;
 	margin: 0 auto;
+}
+
+.product__description {
+	font-size: 20px;
+}
+
+.products__header {
+	text-align: center;
+}
+
+.products__nav {
+	display: inline-block;
+	width: 100%;
+}
+
+.products__nav-item {
+	@extend .three-column-layout;
+	@extend .text-center;
+	a {
+		color: $sassy-pink;
+		font-size: 20px;
+	}
 }
