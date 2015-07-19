@@ -3,7 +3,6 @@ extends ../layouts/default
 
 block content
 	.container
-		hr
 		.products__nav
 			h1.products__header Our Products
 			if products.length
@@ -11,7 +10,6 @@ block content
 					.products__nav-item
 						a(href="##{product.name.split(' ').join('')}")= product.name
 				
-		hr
 		if products.length	
 			each product in products
 				a(name=product.name.split(' ').join(''))

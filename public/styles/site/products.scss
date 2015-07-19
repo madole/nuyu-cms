@@ -21,12 +21,17 @@
 }
 
 .products__header {
-	text-align: center;
+	text-align: center;  
+	border-bottom: 1px solid #eee;
+	border-top: 1px solid #eee;
+	padding: 10px 0;
 }
 
 .products__nav {
 	display: inline-block;
 	width: 100%;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
 }
 
 .products__nav-item {
@@ -36,4 +41,10 @@
 		color: $sassy-pink;
 		font-size: 20px;
 	}
+	
+	&:not(:first-of-type) {
+		@media (min-width: $screen-md-min) {
+			border-left: 1px solid #eee;
+		}
+	}	
 }
