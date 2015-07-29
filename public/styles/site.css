@@ -5081,7 +5081,7 @@ body {
   opacity: 0; }
 
 .gallery__container {
-  border: 1px solid #ccc; }
+  border: 1px solid #eee; }
 
 .gallery__name {
   font-size: 25px;
@@ -5094,7 +5094,8 @@ body {
     border-bottom: none; }
 
 .product__name {
-  font-weight: bold; }
+  font-weight: bold;
+  padding-bottom: 15px; }
 
 .product__image {
   margin: 0 auto; }
