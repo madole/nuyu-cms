@@ -1,5 +1,13 @@
 extends ../layouts/default
 
+mixin productDescription(product)
+	.product__container
+		.product__description!= product.description
+
+
+mixin productImage(product)
+	img(class='product__image' src=product.image.secure_url)
+
 
 block content
 	.container
@@ -11,12 +19,26 @@ block content
 						a(href="##{product.name.split(' ').join('')}")= product.name
 				
 		if products.length	
+			-var i = 0
 			each product in products
-				a(name=product.name.split(' ').join(''))
 				.product
+					a(name=product.name.split(' ').join(''))
 					h2.product__name= product.name
-					img(class='product__image' src=product.image.secure_url)
-					.product__description!= product.description
-					
+					if product.image.url
+						.product--with-image
+							if(i % 2 === 0)
+								.product__image--mobile
+									+productImage(product)
+								+productDescription(product)
+								.product__image--non-mobile
+									+productImage(product)
+							else
+								+productImage(product)
+								+productDescription(product)
+							-i++
+					else
+						.product--no-image
+							+productDescription(product)
+			
 block js
 	script(src='js/productsDecorator.js')

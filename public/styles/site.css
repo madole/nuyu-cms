@@ -1402,22 +1402,22 @@ pre {
   .container-fluid:after {
     clear: both; }
 
-.row {
+.row, .product {
   margin-left: -15px;
   margin-right: -15px; }
-  .row:before, .row:after {
+  .row:before, .product:before, .row:after, .product:after {
     content: " ";
     display: table; }
-  .row:after {
+  .row:after, .product:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .gallery-image, .gallery-image--before, .gallery-image--after, .col-md-3, .gallery-image, .gallery-image--before, .gallery-image--after, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .products__nav-item, .about__right-column, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .gallery-image, .gallery-image--before, .gallery-image--after, .col-sm-6, .col-md-6, .two-column-layout, .contact__left-column, .contact__right-column, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .about__left-column, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .products__nav-item, .two-column-layout, .contact__left-column, .contact__right-column, .about__left-column, .about__right-column, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .gallery-image, .gallery-image--before, .gallery-image--after, .col-md-3, .gallery-image, .gallery-image--before, .gallery-image--after, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .products__nav-item, .about__right-column, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .gallery-image, .gallery-image--before, .gallery-image--after, .col-sm-6, .col-md-6, .two-column-layout, .product--with-image .product__image, .product--with-image .product__container, .contact__left-column, .contact__right-column, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .about__left-column, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .products__nav-item, .two-column-layout, .product--with-image .product__image, .product--with-image .product__container, .contact__left-column, .contact__right-column, .about__left-column, .about__right-column, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .gallery-image, .gallery-image--before, .gallery-image--after, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .products__nav-item, .two-column-layout, .contact__left-column, .contact__right-column, .about__left-column, .about__right-column {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .gallery-image, .gallery-image--before, .gallery-image--after, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .products__nav-item, .two-column-layout, .product--with-image .product__image, .product--with-image .product__container, .contact__left-column, .contact__right-column, .about__left-column, .about__right-column {
   float: left; }
 
 .col-xs-1 {
@@ -1453,7 +1453,7 @@ pre {
 .col-xs-11 {
   width: 91.66667%; }
 
-.col-xs-12, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .products__nav-item, .two-column-layout, .contact__left-column, .contact__right-column, .about__left-column, .about__right-column {
+.col-xs-12, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .products__nav-item, .two-column-layout, .product--with-image .product__image, .product--with-image .product__container, .contact__left-column, .contact__right-column, .about__left-column, .about__right-column {
   width: 100%; }
 
 .col-xs-pull-0 {
@@ -1680,7 +1680,7 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .gallery-image, .gallery-image--before, .gallery-image--after, .col-md-4, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .products__nav-item, .about__right-column, .col-md-5, .col-md-6, .two-column-layout, .contact__left-column, .contact__right-column, .col-md-7, .col-md-8, .about__left-column, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .gallery-image, .gallery-image--before, .gallery-image--after, .col-md-4, .three-column-layout, .home__column-left, .home__column-middle, .home__column-right, .products__nav-item, .about__right-column, .col-md-5, .col-md-6, .two-column-layout, .product--with-image .product__image, .product--with-image .product__container, .contact__left-column, .contact__right-column, .col-md-7, .col-md-8, .about__left-column, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-1 {
     width: 8.33333%; }
@@ -1692,7 +1692,7 @@ pre {
     width: 33.33333%; }
   .col-md-5 {
     width: 41.66667%; }
-  .col-md-6, .two-column-layout, .contact__left-column, .contact__right-column {
+  .col-md-6, .two-column-layout, .product--with-image .product__image, .product--with-image .product__container, .contact__left-column, .contact__right-column {
     width: 50%; }
   .col-md-7 {
     width: 58.33333%; }
@@ -4713,7 +4713,7 @@ button.close {
 .clearfix:after {
   clear: both; }
 
-.center-block, .product__image {
+.center-block {
   display: block;
   margin-left: auto;
   margin-right: auto; }
@@ -4761,7 +4761,7 @@ button.close {
 .visible-lg {
   display: none !important; }
 
-.visible-xs-block, .about_mobile_nurses, .visible-xs-inline, .visible-xs-inline-block, .visible-sm-block, .about_mobile_nurses, .visible-sm-inline, .visible-sm-inline-block, .visible-md-block, .visible-md-inline, .visible-md-inline-block, .visible-lg-block, .visible-lg-inline, .visible-lg-inline-block {
+.visible-xs-block, .about_mobile_nurses, .product__image--mobile, .visible-xs-inline, .visible-xs-inline-block, .visible-sm-block, .about_mobile_nurses, .product__image--mobile, .visible-sm-inline, .visible-sm-inline-block, .visible-md-block, .visible-md-inline, .visible-md-inline-block, .visible-lg-block, .visible-lg-inline, .visible-lg-inline-block {
   display: none !important; }
 
 @media (max-width: 767px) {
@@ -4775,7 +4775,7 @@ button.close {
     display: table-cell !important; } }
 
 @media (max-width: 767px) {
-  .visible-xs-block, .about_mobile_nurses {
+  .visible-xs-block, .about_mobile_nurses, .product__image--mobile {
     display: block !important; } }
 
 @media (max-width: 767px) {
@@ -4797,7 +4797,7 @@ button.close {
     display: table-cell !important; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .visible-sm-block, .about_mobile_nurses {
+  .visible-sm-block, .about_mobile_nurses, .product__image--mobile {
     display: block !important; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -4853,11 +4853,11 @@ button.close {
     display: inline-block !important; } }
 
 @media (max-width: 767px) {
-  .hidden-xs, .about__right-column {
+  .hidden-xs, .about__right-column, .product__image--non-mobile {
     display: none !important; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .hidden-sm, .about__right-column {
+  .hidden-sm, .about__right-column, .product__image--non-mobile {
     display: none !important; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
