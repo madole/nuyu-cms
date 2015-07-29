@@ -9,10 +9,10 @@
 
 .gallery-image {
 	@extend .col-xs-6;
-	@extend .col-sm-3;
-	@extend .col-md-3;
+	//@extend .col-sm-3;
+	//@extend .col-md-3;
 	float: left;
-	height: 300px;
+	padding-top: 10px;
 	img {
 		margin: 0 auto
 	}
@@ -35,7 +35,7 @@
 	
 	&:hover {
 		img {
-			box-shadow: 0px 0px 15px #aaa;
+			opacity: 0.8;
 		}
 		.gallery__zoom {
 			opacity: 1;
@@ -45,7 +45,7 @@
 
 .gallery-image__text {
 	text-align: center;
-	font-size: 25px;
+	font-size: 20px;
 }
 
 .blueimp-gallery > .title.slide-gallery_title {
@@ -55,9 +55,20 @@
 
 .gallery__zoom {
 	position: absolute;
-	top: 10px;
+	top: 20px;
 	left: 28px;
 	color: white;
 	transition-duration: .5s;
 	opacity: 0;
+}
+
+.gallery__container {
+	@extend .two-column-layout;
+	border: 1px solid #ccc;
+}
+
+.gallery__name {
+	@extend .text-center;
+	font-size: 25px;
+	color: $sassy-pink;
 }

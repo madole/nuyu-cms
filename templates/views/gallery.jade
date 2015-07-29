@@ -12,16 +12,18 @@ block content
 		.container
 			if galleries.length
 				each gallery in galleries
-					.gallery-image--before
-						a(href=gallery.beforeImage.secure_url title="Before #{gallery.name}" data-gallery)
-							img(src=gallery._.beforeImage.fill(300,300)).img-rounded
-							i.gallery__zoom.fa.fa-search-plus.fa-2x
-							.gallery-image__text Before #{gallery.name}
-					.gallery-image--after
-						a(href=gallery.afterImage.secure_url title="After #{gallery.name}" data-gallery)
-							img(src=gallery._.afterImage.fill(300,300)).img-rounded
-							i.gallery__zoom.fa.fa-search-plus.fa-2x
-							.gallery-image__text After #{gallery.name}
+					.gallery__container
+						.gallery__name!= gallery.name
+						.gallery-image--before
+							a(href=gallery.beforeImage.secure_url title="Before #{gallery.name}" data-gallery)
+								img(src=gallery._.beforeImage.fill(300,300))
+								i.gallery__zoom.fa.fa-search-plus.fa-2x
+								.gallery-image__text Before
+						.gallery-image--after
+							a(href=gallery.afterImage.secure_url title="After #{gallery.name}" data-gallery)
+								img(src=gallery._.afterImage.fill(300,300))
+								i.gallery__zoom.fa.fa-search-plus.fa-2x
+								.gallery-image__text After
 			else
 				h3.text-muted There are no image galleries yet.
 			
