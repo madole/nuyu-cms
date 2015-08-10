@@ -19,13 +19,25 @@ block content
 		
 		.home__column-middle
 			h2.next-surgery__heading Next Surgery
+			if !surgeries.length 
+				hr
 			table.next-surgery__table
-				each surgery in surgeries
-					tr
-						td= surgery.humanDate
-						td= surgery.where
-			.next-surgery__click
-				a(href="/contact") Click here to book...
+				if surgeries.length
+					each surgery in surgeries
+						tr
+							td= surgery.humanDate
+							td= surgery.where
+					.next-surgery__click
+						a(href="/contact") Click here to book...
+				else
+					.next-surgery__no-surgery No Surgeries currently scheduled.
+						.next-surgery__call 
+							span(class='fa fa-phone')
+							span  Call 
+							span(class="next-surgery__call-detail")= contact.telephone
+							span  to book!
+						
+
 				
 		.home__column-right
 			h2.home__latest-news Latest News
@@ -34,3 +46,11 @@ block content
 			.home__news-brief!= news.content.brief
 			.read-more
 				a(href="/blog") Read more...
+
+	//if testimonial
+	//	.container.testimonials
+	//		hr
+	//		h2 Testimonials
+	//		hr
+	//		blockquote.testimonial= testimonial.text
+	//			footer Happy Customer

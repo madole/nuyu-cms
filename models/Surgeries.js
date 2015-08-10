@@ -9,5 +9,4 @@ Surgeries.add({
 		where: {type: Types.Select, options: "Kates Surgery, Annes Surgery, Tip Top Beauty, Curl up N Dye"}
 });
 
-//PostCategory.relationship({ ref: 'Post', path: 'categories' });
 Surgeries.register();

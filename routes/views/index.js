@@ -5,6 +5,8 @@ var Home = keystone.list('Home');
 var Post = keystone.list('Post');
 var Surgeries = keystone.list('Surgeries');
 var Products = keystone.list('Product');
+var Testimonials = keystone.list('Testimonials');
+var Contact = keystone.list('Contact');
 
 
 function getTimeFromNow(date) {
@@ -50,7 +52,13 @@ exports = module.exports = function (req, res) {
 								console.log(err);
 								return next(err);
 							}
-							locals.surgeries = data.map(function (surgery) {
+							locals.surgeries = data.filter(function(surgery) {
+								if(surgery.date >= new Date()) { 
+									return false; 
+								}
+							}).map(function (surgery) {
+								
+
 								var newSurgery = surgery;
 								console.log(JSON.stringify(surgery));
 								newSurgery.humanDate = moment(surgery.date).format('dddd DD MMMM YYYY');
@@ -72,6 +80,34 @@ exports = module.exports = function (req, res) {
 								}
 								locals.products = data;
 								return next();
+								});
+	});
+
+
+	view.on('init', function(next) {
+		Testimonials.model.findOne()
+			.limit(-1)
+			.exec(function(err, data) {
+							if(err) {
+								console.log(err);
+								return next(err);
+							}
+							locals.testimonial = data;
+							return next();
+						});
+	});
+	
+	view.on('init', function(next) {
+		Contact.model.findOne()
+			.limit(-1)
+			.where('name', 'Kate McDowell')
+			.exec(function(err, data) {
+								 if(err) {
+									 console.log(err);
+									 return next(err);
+								 }
+								 locals.contact = data;
+								 return next();
 								});
 	});
 	

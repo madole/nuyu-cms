@@ -5002,6 +5002,27 @@ body {
   border-top: 1px solid #eee;
   padding-top: 30px; }
 
+.testimonial {
+  border-left: none; }
+  .testimonial:before {
+    color: #FF0080;
+    content: "\f10d";
+    font-family: FontAwesome;
+    font-size: 50px;
+    float: left;
+    margin-right: 10px;
+    margin-top: -10px; }
+
+.next-surgery__heading {
+  margin-bottom: -11px; }
+
+.next-surgery__no-surgery {
+  font-size: 24px;
+  text-align: center; }
+
+.next-surgery__call-detail {
+  color: #FF0080; }
+
 .head__holder {
   margin: 1em; }
   .head__holder .head__circle {
