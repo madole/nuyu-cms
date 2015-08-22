@@ -22,7 +22,7 @@
 .find-us__surgery{
 	text-align: center;
 }
-.next-surgery__heading,
+.next-clinic__heading,
 .home__latest-news,
 .home__products {
 	@extend .home__sub-heading;
@@ -49,7 +49,7 @@
 	}
 }
 
-.next-surgery__click,
+.next-clinic__click,
 .read-more {
 	@extend .pull-right;
 	a {
@@ -62,7 +62,7 @@
 	text-align: center;
 }
 
-.next-surgery__table {
+.next-clinic__table {
 	@extend .table;
 	@extend .table-striped;
 	@extend .table-hover;
@@ -107,13 +107,26 @@
 }
 
 
-.next-surgery__heading {
-	margin-bottom: -11px;
+.next-clinic__heading {
+	text-align: center;
 }
-.next-surgery__no-surgery {
+
+.next-clinic__heading--no-clinics {
+	margin-top: 0;
+	margin-bottom: -11px;
+	text-align: center;
+}
+
+
+.next-clinic__no-clinic {
 	font-size: 24px;
 	text-align: center;
 }
-.next-surgery__call-detail {
+.next-clinic__call {
+	font-size: 20px;
+	text-align: center;
+}
+
+.next-clinic__call-detail {
 	color: $sassy-pink;
 }

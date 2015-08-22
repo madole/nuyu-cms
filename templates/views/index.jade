@@ -18,24 +18,23 @@ block content
 			
 		
 		.home__column-middle
-			h2.next-surgery__heading Next Surgery
-			if !surgeries.length 
-				hr
-			table.next-surgery__table
-				if surgeries.length
-					each surgery in surgeries
+			if clinics.length
+				h2.next-clinic__heading Next Clinic
+				table.next-clinic__table
+					each clinic in clinics
 						tr
-							td= surgery.humanDate
-							td= surgery.where
-					.next-surgery__click
-						a(href="/contact") Click here to book...
-				else
-					.next-surgery__no-surgery No Surgeries currently scheduled.
-						.next-surgery__call 
-							span(class='fa fa-phone')
-							span  Call 
-							span(class="next-surgery__call-detail")= contact.telephone
-							span  to book!
+							td= clinic.humanDate
+							td= clinic.where
+			else                                
+				h2.next-clinic__heading--no-clinics Next Clinic
+				hr
+				.next-clinic__no-clinic No Clinics currently scheduled.
+				
+			.next-clinic__call 
+				span(class='fa fa-phone')
+				span  Call 
+				span(class="next-clinic__call-detail")= contact.telephone
+				span  to book!
 						
 
 				

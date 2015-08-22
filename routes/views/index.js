@@ -3,7 +3,7 @@ var moment = require('moment');
 
 var Home = keystone.list('Home');
 var Post = keystone.list('Post');
-var Surgeries = keystone.list('Surgeries');
+var Clinics = keystone.list('Clinics');
 var Products = keystone.list('Product');
 var Testimonials = keystone.list('Testimonials');
 var Contact = keystone.list('Contact');
@@ -44,7 +44,7 @@ exports = module.exports = function (req, res) {
 	});
 
 	view.on('init', function(next) {
-		Surgeries.model.find()
+		Clinics.model.find()
 			.sort('date')
 			.limit(5)
 			.exec(function (err, data) {
@@ -52,17 +52,15 @@ exports = module.exports = function (req, res) {
 								console.log(err);
 								return next(err);
 							}
-							locals.surgeries = data.filter(function(surgery) {
-								if(surgery.date >= new Date()) { 
-									return false; 
+								 	
+							locals.clinics = data.filter(function(clinic) {
+								if(clinic.date >= new Date()) { 
+									return true; 
 								}
-							}).map(function (surgery) {
-								
-
-								var newSurgery = surgery;
-								console.log(JSON.stringify(surgery));
-								newSurgery.humanDate = moment(surgery.date).format('dddd DD MMMM YYYY');
-								return newSurgery;
+							}).map(function (clinic) {
+								var newClinic = clinic;
+								newClinic.humanDate = moment(clinic.date).format('dddd DD MMMM YYYY');
+								return newClinic;
 							});
 							 
 							return next();
