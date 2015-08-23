@@ -23,8 +23,11 @@ block content
 				table.next-clinic__table
 					each clinic in clinics
 						tr
-							td= clinic.humanDate
-							td= clinic.where
+							if clinic.where
+								td= clinic.humanDate
+								td= clinic.where
+							else
+								td.text-center= clinic.humanDate
 			else                                
 				h2.next-clinic__heading--no-clinics Next Clinic
 				hr

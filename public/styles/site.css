@@ -3810,7 +3810,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 .media-right, .media > .pull-right, .media > .next-clinic__click, .media > .read-more {
   padding-left: 10px; }
 
-.media-left, .media > .pull-left {
+.media-left, .media > .pull-left, #footer .media > .facebook__footer {
   padding-right: 10px; }
 
 .media-left, .media-right, .media-body {
@@ -4721,7 +4721,7 @@ button.close {
 .pull-right, .next-clinic__click, .read-more {
   float: right !important; }
 
-.pull-left {
+.pull-left, #footer .facebook__footer {
   float: left !important; }
 
 .hide {
@@ -4934,6 +4934,14 @@ body {
 #footer a {
   color: #FF0080;
   text-decoration: none; }
+#footer .facebook__footer i {
+  transition-duration: 0.25s;
+  padding: 6px 10px;
+  background-color: white; }
+#footer .facebook__footer:hover i {
+  color: white;
+  border-radius: 50%;
+  background-color: #FF0080; }
 
 .header-navbar .navbar-brand {
   color: #FF0080;
