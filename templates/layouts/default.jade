@@ -7,8 +7,11 @@ html
 	head
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		title= title || 'NuYu - Botox, facial fillers and hyperhydrosis specialists'
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="description", content="A clinic specialising in Botox, Dermal Fillers, and Skin Boosters. Run by a " +
+		"professional group of highly qualified and experienced nurse practitioners. Situated in Co. Down Northern Ireland," +
+		"we offer our services in a range of different locations.")
+		
 		link(rel="shortcut icon", href="/images/icon.png", type="image/x-icon")
 		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", rel="stylesheet")
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
@@ -30,6 +33,7 @@ html
 
 		//- Add any other template-specific HEAD tags by extending the head block
 		block head
+			title= title || "NuYu Aesthetics - Northern Ireland's best Botox, Dermal Fillers, Skin Boosters clinic"
 
 	//- HTML BODY
 	body
