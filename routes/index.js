@@ -21,6 +21,7 @@
 var keystone = require('keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
+var sitemap = require('keystone-express-sitemap');
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
@@ -42,6 +43,9 @@ exports = module.exports = function(app) {
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.get('/gallery', routes.views.gallery);
+	app.get('/sitemap.xml', function(req, res, next) {
+		sitemap.create(keystone, req, res);
+	});
 	app.all('/contact', routes.views.contact);
 	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
