@@ -7,6 +7,7 @@ var Clinics = keystone.list('Clinics');
 var Products = keystone.list('Product');
 var Testimonials = keystone.list('Testimonials');
 var Contact = keystone.list('Contact');
+var RightHeader = keystone.list('HomeColumnRightHeader');
 
 
 function getTimeFromNow(date) {
@@ -107,6 +108,21 @@ exports = module.exports = function (req, res) {
 								 locals.contact = data;
 								 return next();
 								});
+	});	
+
+	view.on('init', function(next) {
+		RightHeader.model.findOne()
+			.limit(-1)
+			.exec(
+				function(err, data) {
+					if(err) {
+					 console.log(err);
+					 return next(err);
+					}
+
+					locals.rightHeader = data ? data.name : 'Latest News';
+					return next();
+				});
 	});
 	
 	// Render the view
