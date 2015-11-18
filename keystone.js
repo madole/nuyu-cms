@@ -13,15 +13,15 @@ keystone.init({
 
 	'name': 'NuYu',
 	'brand': 'NuYu',
-	
+
 	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jade',
-	
+
 	'emails': 'templates/emails',
-	
+
 	'auto update': true,
 	'session': true,
 	'auth': true,
@@ -92,7 +92,7 @@ keystone.set('nav', {
 	'product': 'Product',
 	'posts': ['posts', 'post-categories'],
 	'galleries': 'galleries',
-	'enquiries': 'enquiries',
+	'feedback': 'enquiries',
 	'contact': 'Contact',
 	'users': 'users'
 });
