@@ -15,8 +15,6 @@ block body-contents
 				| )
 	if enquiry.phone
 		p.text-larger Phone: #{enquiry.phone}
-	if enquiry.enquiryType
-		p.text-larger #{enquiry._.enquiryType.format()}
 	if enquiry.message
 		.text-larger !{enquiry.message.html}
 	p.text-muted Sent #{enquiry._.createdAt.format()}
