@@ -1,6 +1,6 @@
 .product {
 	@extend .row;
-	border-bottom: 1px solid #ccc;  
+	border-bottom: 1px solid #ccc;
 	padding-bottom: 20px;
 	&:last-of-type {
 		border-bottom: none;
@@ -22,7 +22,7 @@
 }
 
 .products__header {
-	text-align: center;  
+	text-align: center;
 	border-bottom: 1px solid #eee;
 	border-top: 1px solid #eee;
 	padding: 10px 0;
@@ -36,18 +36,12 @@
 }
 
 .products__nav-item {
-	@extend .three-column-layout;
+	@extend .two-column-layout;
 	@extend .text-center;
 	a {
 		color: $sassy-pink;
 		font-size: 20px;
 	}
-	
-	&:not(:first-of-type) {
-		@media (min-width: $screen-md-min) {
-			border-left: 1px solid #eee;
-		}
-	}	
 }
 
 //Show on mobile
